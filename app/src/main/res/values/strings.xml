@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">FPBM</string>
+    <string name="Button_start_home">Commencer</string>
+    <string name="ecenter">ecenter</string>
+    <string name="cartoonhome">cartoonhome</string>
+    <string name="commencer_but">Commencer</string>
+    <string name="elipsel">elipsel</string>
+    <string name="elipser">elipser</string>
+    <string name="ufbm_text">Université Sultan Moulay Slimane</string>
+    <string name="welcom_txt">Bienvenue dans votre application mobile FPBMapp</string>
+    <string name="elipsecp2">elipsecp2</string>
+    <string name="loginimg">loginimg</string>
+    <string name="elipserp2">elipserp2</string>
+    <string name="elipserbtp2">elipserbtp2</string>
+    <string name="elipselbp2">elipselbp2</string>
+    <string name="login_butt">Login</string>
+    <string name="log_in_text">Log In</string>
+    <string name="num_aogee">Num Apogee</string>
+    <string name="date_naiss">Date Naissance</string>
+    <string name="avis">avis</string>
+    <string name="emploi">emploi</string>
+    <string name="notes">notes</string>
+    <string name="rendez_vous">rendez-vous</string>
+    <string name="profil">profil</string>
+    <string name="dashbord">Tableau de bord</string>
+    <string name="logout">logout</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

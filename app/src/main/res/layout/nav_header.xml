@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/butdef"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:layout_marginBottom="-40dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/image" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/circleImageView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/combd"
+        android:layout_toRightOf="@+id/circleImageView"
+        android:text="User"
+        android:textColor="#fff"
+        android:textSize="15.4sp" />
+
+    <TextView
+        android:id="@+id/cne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/circleImageView"
+        android:text="D1330554875"
+        android:textColor="#fff"
+        android:fontFamily="@font/combd"
+        android:textSize="15sp" />
+
+</RelativeLayout>

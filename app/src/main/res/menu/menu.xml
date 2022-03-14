@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title="@string/notes"
+            android:icon="@drawable/ic_notes"
+            android:id="@+id/notes"/>
+
+        <item
+            android:title="@string/emploi"
+            android:icon="@drawable/id_date_emploi"
+            android:id="@+id/emploi"/>
+
+        <item
+            android:title="Scolarité"
+            android:icon="@drawable/ic_school"
+            android:id="@+id/scolarite"/>
+
+        <item
+            android:title="Notification"
+            android:icon="@drawable/ic_notifications"
+            android:id="@+id/notification"/>
+
+        <item
+            android:title="@string/logout"
+            android:icon="@drawable/ic_logout"
+            android:id="@+id/logout"/>
+
+
+
+    </group>
+
+    <item
+        android:title="">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:title="Setting"
+                    android:icon="@drawable/ic_settings"
+                    android:id="@+id/setting"/>
+
+                <item
+                    android:title="Support"
+                    android:icon="@drawable/ic_support"
+                    android:id="@+id/support"/>
+
+            </group>
+
+        </menu>
+
+
+    </item>
+
+</menu>

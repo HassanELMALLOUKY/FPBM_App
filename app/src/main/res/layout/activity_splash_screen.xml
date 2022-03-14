@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    tools:context=".SplashScreenActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="413dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="320dp"
+        android:contentDescription="@string/ecenter"
+        app:srcCompat="@drawable/ecenter"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="296dp"
+        android:contentDescription="@string/cartoonhome"
+        app:srcCompat="@drawable/home" />
+
+    <Button
+        android:id="@+id/butwelcome"
+        android:layout_width="256dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="87dp"
+        android:background="@drawable/default_button"
+        android:text="@string/commencer_but"
+        android:textAllCaps="false"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/elipsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/elipsel"
+        app:srcCompat="@drawable/elipsel"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/elipser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="@string/elipser"
+        app:srcCompat="@drawable/elipser"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/elipsel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/combd"
+        android:gravity="center_horizontal|top"
+        android:text="@string/ufbm_text"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="487dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="169dp"
+        android:fontFamily="@font/comlt"
+        android:gravity="center_horizontal|top"
+        android:text="@string/welcom_txt"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+</RelativeLayout>

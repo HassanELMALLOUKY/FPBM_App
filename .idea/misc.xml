@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/drawable/edit_text_rounded.xml" value="0.1859375" />
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/activity_main2.xml" value="0.18" />
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/activity_splash_screen.xml" value="0.18" />
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/app_bar_main.xml" value="0.15" />
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/fragment_emploi.xml" value="0.18" />
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/fragment_notes.xml" value="0.1" />
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/fragment_scolarite.xml" value="0.18" />
+        <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/nav_header.xml" value="0.22" />
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM/app/src/main/res/drawable-v24/ic_home_selected.xml" value="0.2703125" />
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM/app/src/main/res/drawable-v24/ic_notes_selected.xml" value="0.2703125" />
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM/app/src/main/res/drawable-v24/ic_notifications_selected.xml" value="0.2703125" />

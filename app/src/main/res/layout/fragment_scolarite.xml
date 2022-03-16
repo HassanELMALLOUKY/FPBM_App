@@ -6,9 +6,84 @@
     tools:context=".ScolariteFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="156dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:background="#5A5959"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="157dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-2dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logofp" />
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="577dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center_vertical"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Service de scolarité"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_rounded"
+            android:ems="10"
+            android:hint="CNE/CODE MASSAR"
+            android:paddingLeft="23dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_text_rounded"
+            android:ems="10"
+            android:hint="Date Naissnce"
+            android:inputType="date"
+            android:paddingLeft="23dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_text_rounded"
+            android:text="Connexion" />
+
+    </LinearLayout>
 
 </FrameLayout>

@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScolariteFragment">
+    tools:context=".AvisFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:gravity="center_horizontal"
-        android:layout_gravity="center"/>
+        android:layout_height="match_parent"
+        android:text="Avis Fragment"
+        android:textSize="20sp"
+        android:gravity="center"/>
 
 </FrameLayout>

@@ -18,23 +18,23 @@
         android:src="@drawable/image" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/etdName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/circleImageView"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="14dp"
-        android:fontFamily="@font/combd"
         android:layout_toRightOf="@+id/circleImageView"
+        android:fontFamily="@font/combd"
         android:text="User"
         android:textColor="#fff"
         android:textSize="15.4sp" />
 
     <TextView
-        android:id="@+id/cne"
+        android:id="@+id/etdCNE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
+        android:layout_below="@+id/etdName"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="6dp"
         android:layout_toRightOf="@+id/circleImageView"

@@ -5,7 +5,7 @@ plugins {
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.fpbm"
@@ -52,5 +52,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.firebaseui:firebase-ui-database:1.2.0'
+
+    implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
 
 }

@@ -42,13 +42,13 @@ public class SingInActivity extends AppCompatActivity implements View.OnClickLis
 
         mAuth= FirebaseAuth.getInstance();
 
-        editTextCNE= findViewById(R.id.editTextCNE);
-        editTextPassword= findViewById(R.id.editTextDateN);
+        editTextCNE= findViewById(R.id.num_apogee_et);
+        editTextPassword= findViewById(R.id.Cin_et);
         progressBar= (ProgressBar) findViewById(R.id.progressSingIn);
 
 
 
-        connexion= findViewById(R.id.buttonConnexion);
+        connexion= findViewById(R.id.button_login);
         connexion.setOnClickListener(this);
 
 

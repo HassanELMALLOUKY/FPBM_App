@@ -38,9 +38,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="6dp"
         android:layout_toRightOf="@+id/circleImageView"
+        android:fontFamily="@font/combd"
         android:text="D1330554875"
         android:textColor="#fff"
-        android:fontFamily="@font/combd"
         android:textSize="15sp" />
 
 </RelativeLayout>

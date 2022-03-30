@@ -32,15 +32,4 @@ public class ScolariteFragment extends Fragment {
 
         return view;
     }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        if (firebaseAuth.getCurrentUser() == null ){
-            startActivity(new Intent(getActivity(), SingInActivity.class));
-            getActivity().finish();
-        }
-    }
-
 }

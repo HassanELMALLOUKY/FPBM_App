@@ -43,6 +43,12 @@
     <item name="color">#AE000000</item>
     </style>
 
+    <style name="AppTheme.SingleHorizontalLineStyle" parent="Theme.FPBM">
+        <item name="android:background">#878181</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
 
 
 </resources>

@@ -2,6 +2,7 @@ package com.example.fpbm;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -88,7 +89,6 @@ public class AvisFragment extends Fragment {
                         viewHolder.title.setText(title);
                         viewHolder.description.setText(description);
                         viewHolder.date.setText(date);
-
                     }
 
                     @Override
@@ -97,17 +97,12 @@ public class AvisFragment extends Fragment {
                     }
                 });
 
+                viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
-
-//                viewHolder.lyMessage.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        Intent profileintent = new Intent(getContext(), MessagesActivity.class);
-//                        profileintent.putExtra("userIDvisited",listPostKey);
-//                        getContext().startActivity(profileintent);
-//                    }
-//                });
-
+                    }
+                });
 
 
 
@@ -126,6 +121,7 @@ public class AvisFragment extends Fragment {
         View view;
         TextView title;
         TextView description,date;
+        CardView cardView;
 
 
         public avisHolderView(View itemView) {
@@ -136,6 +132,7 @@ public class AvisFragment extends Fragment {
             title = view.findViewById(R.id.avisTitle);
             description = view.findViewById(R.id.avisDescription);
             date = view.findViewById(R.id.avisDate);
+            cardView = view.findViewById(R.id.avisCard);
 
 
         }

@@ -7,6 +7,7 @@ public class AvisClass {
     private String date;
     private String description;
     private String title;
+    boolean expanded;
 
     public AvisClass() {
     }
@@ -16,6 +17,7 @@ public class AvisClass {
         this.date = date;
         this.description = description;
         this.title = title;
+        this.expanded = false;
     }
 
     public String getAffiche() {
@@ -49,4 +51,14 @@ public class AvisClass {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public boolean isExpanded() {
+        return expanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        this.expanded = expanded;
+    }
+
+
 }

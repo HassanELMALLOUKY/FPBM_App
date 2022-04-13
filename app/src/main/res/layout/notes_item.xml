@@ -19,7 +19,7 @@
 
 
             <TextView
-                android:id="@+id/avisTitle"
+                android:id="@+id/semesterName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
+            android:layout_marginTop="6dp"
             android:orientation="horizontal">
 
             <TextView
@@ -59,19 +60,81 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/mNote1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/combd"
-                android:textStyle="bold"
                 android:gravity="center_vertical"
                 android:text="18 (V)"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/comsb"
+                android:gravity="center_vertical"
+                android:text="Management de projet"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/mNote2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/combd"
+                android:gravity="center_vertical"
+                android:text="18 (V)"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/comsb"
+                android:gravity="center_vertical"
+                android:text="Python"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/mNote3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/combd"
+                android:gravity="center_vertical"
+                android:text="18 (V)"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
 
 
 

@@ -56,11 +56,6 @@ public class SingInActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    @Override
-    public void onBackPressed() {
-        startActivity(new Intent(SingInActivity.this, MainActivity.class));
-        finish();
-    }
 
     @Override
     public void onClick(View view) {

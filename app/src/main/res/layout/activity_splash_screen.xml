@@ -50,6 +50,7 @@
         android:layout_marginBottom="87dp"
         android:background="@drawable/default_button"
         android:text="@string/commencer_but"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 

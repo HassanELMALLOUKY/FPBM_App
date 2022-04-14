@@ -53,7 +53,6 @@ public class SingInActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
-
     }
 
 

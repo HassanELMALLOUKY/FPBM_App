@@ -51,12 +51,13 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/model1Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:fontFamily="@font/comsb"
                 android:gravity="center_vertical"
-                android:text="Development Mobile"
+                android:text="M1"
                 android:textColor="@color/black" />
 
             <TextView
@@ -82,12 +83,13 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/model2Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:fontFamily="@font/comsb"
                 android:gravity="center_vertical"
-                android:text="Management de projet"
+                android:text="M2"
                 android:textColor="@color/black" />
 
             <TextView
@@ -111,15 +113,17 @@
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/model3Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:fontFamily="@font/comsb"
                 android:gravity="center_vertical"
-                android:text="Python"
+                android:text="M3"
                 android:textColor="@color/black" />
 
             <TextView

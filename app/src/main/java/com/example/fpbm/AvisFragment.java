@@ -55,7 +55,6 @@ public class AvisFragment extends Fragment {
 
     private void widget() {
 
-
         avisRecycler = view.findViewById(R.id.avisRecycler);
         avisRecycler.setHasFixedSize(true);
         mLayoutManagersAvis = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false);

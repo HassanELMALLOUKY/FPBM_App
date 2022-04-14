@@ -6,6 +6,8 @@
     app:cardCornerRadius="10dp"
     android:background="@color/white"
     android:layout_marginTop="8dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp">
 
@@ -13,7 +15,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#AFD7F6"
+        android:background="#63CDCDCD"
         style="@style/Base.CardView">
 
 
@@ -27,8 +29,9 @@
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="Semester"
-                android:textSize="16dp"
-                android:fontFamily="@font/commd"
+                android:paddingLeft="15dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/comsb"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black"
@@ -55,9 +58,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:fontFamily="@font/comsb"
                 android:gravity="center_vertical"
                 android:text="M1"
+                android:fontFamily="@font/comlt"
                 android:textColor="@color/black" />
 
             <TextView
@@ -87,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:fontFamily="@font/comsb"
+                android:fontFamily="@font/comlt"
                 android:gravity="center_vertical"
                 android:text="M2"
                 android:textColor="@color/black" />
@@ -121,8 +124,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:fontFamily="@font/comsb"
                 android:gravity="center_vertical"
+                android:fontFamily="@font/comlt"
                 android:text="M3"
                 android:textColor="@color/black" />
 

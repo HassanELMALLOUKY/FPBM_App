@@ -48,7 +48,7 @@ public class NotesFragment extends Fragment {
         mFirebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = mFirebaseAuth.getCurrentUser();
 
-        //Toast.makeText(getActivity(), firebaseUser.getUid(), Toast.LENGTH_SHORT).show();
+
 
         return view;
     }
@@ -60,7 +60,7 @@ public class NotesFragment extends Fragment {
     }
 
     private void notes() {
-        final Query queryNotes = FirebaseDatabase.getInstance().getReference().child("markes").child(firebaseUser.getUid());
+        final Query queryNotes = FirebaseDatabase.getInstance().getReference().child("markes").child(firebaseUser.getUid()).orderByChild("sName");
         firebaseRecyclerAdapterNotes = new FirebaseRecyclerAdapter<NotesModel, notesHolderView>(
                 NotesModel.class,
                 R.layout.notes_item,
@@ -76,8 +76,8 @@ public class NotesFragment extends Fragment {
                 dbRef.child("markes").child(firebaseUser.getUid()).child(listPostKey).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        String note = String.valueOf(dataSnapshot.child("Model1").child("note").getValue());
-                        String name = String.valueOf(dataSnapshot.child("Model1").child("name").getValue());
+                        String note1 = String.valueOf(dataSnapshot.child("Model1").child("note").getValue());
+                        String name1 = String.valueOf(dataSnapshot.child("Model1").child("name").getValue());
 
                         String note2 = String.valueOf(dataSnapshot.child("Model2").child("note").getValue());
                         String name2 = String.valueOf(dataSnapshot.child("Model2").child("name").getValue());
@@ -88,16 +88,13 @@ public class NotesFragment extends Fragment {
 
 
 
-                        notesHolderView.modelNote.setText(note);
-                        notesHolderView.semester.setText(listPostKey);
-                        notesHolderView.modelName.setText(name);
-
+                        notesHolderView.modelNote.setText(note1);
+                        notesHolderView.modelName.setText(name1);
                         notesHolderView.model2Note.setText(note2);
                         notesHolderView.model2Name.setText(name2);
-
                         notesHolderView.model3Note.setText(note3);
                         notesHolderView.model3Name.setText(name3);
-
+                        notesHolderView.semester.setText(listPostKey);
 
 
                     }

@@ -76,14 +76,15 @@ public class NotesFragment extends Fragment {
                 dbRef.child("markes").child(firebaseUser.getUid()).child(listPostKey).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        String note = String.valueOf(dataSnapshot.child("Model1").getValue());
-                        String name = String.valueOf(dataSnapshot.child("Model1").getKey());
+                        String note = String.valueOf(dataSnapshot.child("Model1").child("note").getValue());
+                        String name = String.valueOf(dataSnapshot.child("Model1").child("name").getValue());
 
-                        String note2 = String.valueOf(dataSnapshot.child("Model2").getValue());
-                        String name2 = String.valueOf(dataSnapshot.child("Model2").getKey());
+                        String note2 = String.valueOf(dataSnapshot.child("Model2").child("note").getValue());
+                        String name2 = String.valueOf(dataSnapshot.child("Model2").child("name").getValue());
 
-                        String note3 = String.valueOf(dataSnapshot.child("Model3").getValue());
-                        String name3 = String.valueOf(dataSnapshot.child("model3").getKey());
+                        String note3 = String.valueOf(dataSnapshot.child("Model3").child("note").getValue());
+                        String name3 = String.valueOf(dataSnapshot.child("Model3").child("name").getValue());
+
 
 
 
@@ -96,6 +97,8 @@ public class NotesFragment extends Fragment {
 
                         notesHolderView.model3Note.setText(note3);
                         notesHolderView.model3Name.setText(name3);
+
+
 
                     }
 

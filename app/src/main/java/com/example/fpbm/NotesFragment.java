@@ -85,6 +85,15 @@ public class NotesFragment extends Fragment {
                         String note3 = String.valueOf(dataSnapshot.child("Model3").child("note").getValue());
                         String name3 = String.valueOf(dataSnapshot.child("Model3").child("name").getValue());
 
+                        String note4 = String.valueOf(dataSnapshot.child("Model4").child("note").getValue());
+                        String name4 = String.valueOf(dataSnapshot.child("Model4").child("name").getValue());
+
+                        String note5 = String.valueOf(dataSnapshot.child("Model5").child("note").getValue());
+                        String name5 = String.valueOf(dataSnapshot.child("Model5").child("name").getValue());
+
+                        String note6 = String.valueOf(dataSnapshot.child("Model6").child("note").getValue());
+                        String name6 = String.valueOf(dataSnapshot.child("Model6").child("name").getValue());
+
                         String semester = String.valueOf(dataSnapshot.child("sName").getValue());
 
 
@@ -96,6 +105,12 @@ public class NotesFragment extends Fragment {
                         notesHolderView.model2Name.setText(name2);
                         notesHolderView.model3Note.setText(note3);
                         notesHolderView.model3Name.setText(name3);
+                        notesHolderView.model4Note.setText(note4);
+                        notesHolderView.model4Name.setText(name4);
+                        notesHolderView.model5Note.setText(note5);
+                        notesHolderView.model5Name.setText(name5);
+                        notesHolderView.model6Note.setText(note6);
+                        notesHolderView.model6Name.setText(name6);
                         notesHolderView.semester.setText(semester);
 
 
@@ -126,6 +141,9 @@ public class NotesFragment extends Fragment {
         TextView modelName, modelNote;
         TextView model2Name, model2Note;
         TextView model3Name, model3Note;
+        TextView model4Name, model4Note;
+        TextView model5Name, model5Note;
+        TextView model6Name, model6Note;
         TextView semester;
 
         public notesHolderView(@NonNull View itemView) {
@@ -138,6 +156,12 @@ public class NotesFragment extends Fragment {
             model2Name = view.findViewById(R.id.model2Name);
             model3Note = view.findViewById(R.id.mNote3);
             model3Name = view.findViewById(R.id.model3Name);
+            model4Note = view.findViewById(R.id.mNote4);
+            model4Name = view.findViewById(R.id.model4Name);
+            model5Note = view.findViewById(R.id.mNote5);
+            model5Name = view.findViewById(R.id.model5Name);
+            model6Note = view.findViewById(R.id.mNote6);
+            model6Name = view.findViewById(R.id.model6Name);
             semester = view.findViewById(R.id.semesterName);
         }
     }

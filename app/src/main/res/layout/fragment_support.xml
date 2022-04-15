@@ -8,6 +8,7 @@
     tools:context=".SupportFragment">
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
+        android:id="@+id/t"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:padding="20dp"

@@ -85,6 +85,8 @@ public class NotesFragment extends Fragment {
                         String note3 = String.valueOf(dataSnapshot.child("Model3").child("note").getValue());
                         String name3 = String.valueOf(dataSnapshot.child("Model3").child("name").getValue());
 
+                        String semester = String.valueOf(dataSnapshot.child("sName").getValue());
+
 
 
 
@@ -94,7 +96,7 @@ public class NotesFragment extends Fragment {
                         notesHolderView.model2Name.setText(name2);
                         notesHolderView.model3Note.setText(note3);
                         notesHolderView.model3Name.setText(name3);
-                        notesHolderView.semester.setText(listPostKey);
+                        notesHolderView.semester.setText(semester);
 
 
                     }

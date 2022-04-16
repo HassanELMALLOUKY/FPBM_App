@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FPBM">
         <activity
+            android:name=".EmploiViewActivity"
+            android:exported="true" />
+        <activity
             android:name=".EmploiActivity"
             android:exported="true" />
         <activity

@@ -12,10 +12,6 @@
         <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/fragment_notes.xml" value="0.1" />
         <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/fragment_scolarite.xml" value="0.18" />
         <entry key="..\:/Master ISI/Dev_Mobile_1/Mini-Projet/FPBM_App/app/src/main/res/layout/nav_header.xml" value="0.22" />
-        <entry key="..\:/Master ISI/Dev_Mobile_1/fpbmV1/app/src/main/res/layout/activity_splash_screen.xml" value="0.16666666666666666" />
-        <entry key="..\:/Master ISI/Dev_Mobile_1/fpbmV1/app/src/main/res/layout/fragment_setting.xml" value="0.12083333333333333" />
-        <entry key="..\:/Master ISI/Dev_Mobile_1/fpbmV1/app/src/main/res/layout/fragment_support.xml" value="0.21" />
-        <entry key="..\:/Master ISI/Dev_Mobile_1/fpbmV1/app/src/main/res/layout/notes_item.xml" value="0.25" />
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM/app/src/main/res/drawable-v24/ic_home_selected.xml" value="0.2703125" />
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM/app/src/main/res/drawable-v24/ic_notes_selected.xml" value="0.2703125" />
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM/app/src/main/res/drawable-v24/ic_notifications_selected.xml" value="0.2703125" />
@@ -51,18 +47,25 @@
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM_App/app/src/main/res/layout/fragment_scolarite.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM_App/app/src/main/res/layout/nav_header.xml" value="0.21981981981981982" />
         <entry key="..\:/Users/Ayoub Karam/AndroidStudioProjects/FPBM_App/app/src/main/res/menu/menu.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/drawable/bg_card_background.xml" value="0.2301801801801802" />
+        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/drawable/default_button.xml" value="0.2301801801801802" />
+        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/activity_emploi.xml" value="0.25" />
+        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/activity_emploi_view.xml" value="0.21621621621621623" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/activity_main2.xml" value="0.25" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/activity_sing_in.xml" value="0.25" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/avis_item.xml" value="0.264" />
+        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/emploi_item.xml" value="0.21621621621621623" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/fragment_avis.xml" value="0.25" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/fragment_emploi.xml" value="0.25" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/fragment_notes.xml" value="0.21621621621621623" />
-        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/fragment_scolarite.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/fragment_scolarite.xml" value="0.1" />
+        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/fragment_support.xml" value="0.21621621621621623" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/nav_header.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/notes_item.xml" value="0.264" />
+        <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/layout/semester_item.xml" value="0.264" />
         <entry key="..\:/Users/Ayoub karam/StudioProjects/FPBM_App/app/src/main/res/menu/menu.xml" value="0.25" />
       </map>
     </option>

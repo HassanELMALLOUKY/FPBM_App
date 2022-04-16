@@ -77,6 +77,7 @@ public class NotesFragment extends Fragment {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         String note1 = String.valueOf(dataSnapshot.child("Model1").child("note").getValue());
+                        Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
                         String name1 = String.valueOf(dataSnapshot.child("Model1").child("name").getValue());
 
                         String note2 = String.valueOf(dataSnapshot.child("Model2").child("note").getValue());

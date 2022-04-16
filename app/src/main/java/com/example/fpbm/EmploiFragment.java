@@ -52,7 +52,6 @@ public class EmploiFragment extends Fragment {
         });
 
 
-
         return view;
     }
 }

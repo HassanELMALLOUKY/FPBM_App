@@ -167,7 +167,7 @@
         android:drawablePadding="12dp"
         android:ems="10"
         android:hint="@string/date_naiss"
-        android:inputType="number"
+        android:inputType="date"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:textSize="14sp"

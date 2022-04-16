@@ -1,207 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SupportFragment">
-    <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
-        android:id="@+id/t"
+    android:background="#ECECEC">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:padding="20dp"
-        android:background="@color/butdef">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/image_id"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/student_ic" />
-
-        <TextView
-            android:id="@+id/full_name"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp"
-            android:layout_toRightOf="@id/image_id"
-            android:fontFamily="@font/comsb"
-            android:text="Amine Batsi"
-            android:textSize="20sp" />
-    </RelativeLayout>
+            android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:layout_marginTop="-60dp">
-        
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="125dp"
-            android:layout_weight="1"
-            app:cardElevation="10dp"
-            app:cardBackgroundColor="#FBE650"
-            android:layout_margin="10dp">
-
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp">
+                android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/ic_apogee" />
-
-
-                <TextView
-                    android:id="@+id/id_card"
+                    android:id="@+id/imageView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/comrg"
-                    android:includeFontPadding="false"
-                    android:text="D12313413"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/id_card_bellow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/id_card"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/comrg"
-                    android:includeFontPadding="false"
-                    android:text="CNE"
-                    android:textSize="12sp" />
-
-            </RelativeLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="125dp"
-            android:layout_weight="1"
-            app:cardElevation="10dp"
-            app:cardBackgroundColor="#FBE650"
-            android:layout_margin="10dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp">
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/top_background" />
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/ic_cn_e" />
+                    android:id="@+id/imageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView9"
+                    app:srcCompat="@drawable/profile" />
 
 
                 <TextView
-                    android:id="@+id/id_TextLeftCard"
+                    android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/comrg"
-                    android:includeFontPadding="false"
-                    android:text="123123456"
-                    android:textSize="20sp" />
+                    android:text="lionfischer@gmail.com"
+                    android:visibility="gone"
 
-                <TextView
-                    android:id="@+id/id_TextLeftCard_Bellow"
-                    android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/id_TextLeftCard"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="@font/comrg"
-                    android:includeFontPadding="false"
-                    android:text="APOGEE"
-                    android:textSize="12sp" />
-            </RelativeLayout>
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15">
 
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:id="@+id/button5"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/background_btn"
+                        android:drawableStart="@drawable/account"
+                        android:drawablePadding="20dp"
+                        android:elevation="3dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:text="Student Full Name "
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/button4"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/background_btn"
+                        android:drawableStart="@drawable/ane"
+                        android:drawablePadding="20dp"
+                        android:gravity="center_vertical"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:orientation="vertical">
+                        android:elevation="3dp"
+                        android:paddingStart="20dp"
+                        android:text="CNE"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Full Name"
-            app:boxBackgroundColor="@android:color/transparent"
-            android:layout_marginBottom="10dp">
+                    <TextView
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/background_btn"
+                        android:drawableStart="@drawable/birthday"
+                        android:drawablePadding="20dp"
+                        android:elevation="3dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:text="BirthDay"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_person"
-                android:drawablePadding="10dp"
-                android:text="Amine Batsi"
-                tools:ignore="TouchTargetSizeCheck" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Full Name"
-            app:boxBackgroundColor="@android:color/transparent"
-            android:backgroundTint="@android:color/transparent"
-            android:layout_marginBottom="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_person"
-                android:drawablePadding="10dp"
-                android:text="Amine Batsi"
-                tools:ignore="TouchTargetSizeCheck" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Full Name"
-            app:boxBackgroundColor="@android:color/transparent"
-            android:layout_marginBottom="10dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_person"
-                android:drawablePadding="10dp"
-                android:text="Amine Batsi"
-                tools:ignore="TouchTargetSizeCheck" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/Log_out"
-            android:layout_width="256dp"
-            android:layout_height="48dp"
-            android:background="@drawable/default_button"
-            android:text="Log out"
-            android:textColor="@color/white"
-            android:textAllCaps="false"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"/>
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/background_btn"
+                        android:drawableStart="@drawable/speciality"
+                        android:paddingEnd="20dp"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="20dp"
+                        android:elevation="3dp"
+                        android:paddingStart="20dp"
+                        android:text="Speciality"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
 
-</LinearLayout>
+
+                    <Button
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/background_blue"
+                        android:elevation="3dp"
+                        android:text="Log Out"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -66,7 +66,7 @@ public class NotesFragment extends Fragment {
                 R.layout.notes_item,
                 notesHolderView.class,
                 queryNotes
-        ) {
+        ){
             @Override
             protected void populateViewHolder(notesHolderView notesHolderView, NotesModel notesModel, int i) {
 

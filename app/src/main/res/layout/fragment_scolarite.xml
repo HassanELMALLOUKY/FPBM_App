@@ -84,12 +84,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Valider"
+            android:fontFamily="@font/combd"
+            android:background="@drawable/background_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.556" />
+            app:layout_constraintVertical_bias="0.626" />
 
         <!-- ImageView beside title of ToolBar -->
 
@@ -107,43 +109,48 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.584">
 
-        <CheckBox
+        <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/butdef"
-            android:minHeight="48dp"
-            android:text="Attestation de scolarité" />
+            android:layout_height="wrap_content">
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/butdef"
-            android:minHeight="48dp"
-            android:text="Relevés des notes" />
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/butdef"
-            android:minHeight="48dp"
-            android:text="Attestation Master" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/butdef"
+                android:minHeight="48dp"
+                android:text="Attestation de scolarité" />
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/butdef"
-            android:minHeight="48dp"
-            android:text="Carte d'étudiant" />
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/butdef"
+                android:minHeight="48dp"
+                android:text="Relevés des notes" />
 
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/butdef"
+                android:minHeight="48dp"
+                android:text="Attestation Master" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/butdef"
+                android:minHeight="48dp"
+                android:text="Carte d'étudiant" />
+        </RadioGroup>
 
     </LinearLayout>
 

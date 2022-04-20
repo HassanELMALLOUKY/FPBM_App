@@ -5,11 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SingInActivity">
+
     <ImageView
         android:id="@+id/elipsel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
         android:contentDescription="@string/elipsel"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/elipsel"
         tools:ignore="ImageContrastCheck" />
     <ImageView

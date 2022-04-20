@@ -4,10 +4,9 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
-    android:background="@color/white"
     android:layout_marginTop="8dp"
-    app:cardBackgroundColor="@android:color/transparent"
-    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="8dp"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp">
 
@@ -15,27 +14,26 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#63CDCDCD"
         style="@style/Base.CardView">
 
 
 
-            <TextView
-                android:id="@+id/semesterName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:gravity="center"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:text="Semester"
-                android:paddingLeft="15dp"
-                android:textSize="15sp"
-                android:fontFamily="@font/comsb"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/semesterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Semester"
+            android:paddingLeft="15dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/comsb"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
 
         <View

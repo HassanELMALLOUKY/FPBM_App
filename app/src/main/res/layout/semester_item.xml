@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="100dp"
     android:id="@+id/avisCard"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
-    app:cardBackgroundColor="@android:color/transparent"
-    app:cardElevation="0dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="10dp">
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginTop="6dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardElevation="10dp">
 
     <LinearLayout
         android:id="@+id/linearLayoutFile1"
-        style="@style/Base.CardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#63CDCDCD"
         android:gravity="center_vertical"
         android:orientation="vertical">
 

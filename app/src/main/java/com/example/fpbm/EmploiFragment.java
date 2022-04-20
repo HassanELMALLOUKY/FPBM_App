@@ -28,7 +28,7 @@ public class EmploiFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(),EmploiActivity.class);
-                intent.putExtra("data","master");
+                intent.putExtra("data","Master");
                 startActivity(intent);
             }
         });

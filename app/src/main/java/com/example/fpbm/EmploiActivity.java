@@ -1,5 +1,4 @@
 package com.example.fpbm;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,8 +6,10 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,10 +33,12 @@ public class EmploiActivity extends AppCompatActivity {
     private FirebaseDatabase db = com.google.firebase.database.FirebaseDatabase.getInstance();
     private DatabaseReference dbRef = db.getReference();
 
-    private RecyclerView fileRecycler;
+    private RecyclerView fileRecycler, testRecycler;
     private FirebaseRecyclerAdapter<EmploiModel, emploiHolderView> firebaseRecyclerAdapterMessages;
-    private LinearLayoutManager mLayoutManagersEmploi;
-    private String semester;
+    private FirebaseRecyclerAdapter<EmploiModel, testHolderView> firebaseRecyclerAdapter;
+    private LinearLayoutManager mLayoutManagersEmploi, mLayoutManagersTest;
+    private String pdf;
+    boolean check=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +56,116 @@ public class EmploiActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         emploi();
+
     }
 
+    private void test(String s) {
+        final Query testQuery = FirebaseDatabase.getInstance().getReference().child("Emplois du temps").child(data).child(s);
+        firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<EmploiModel, testHolderView>(
+                EmploiModel.class,
+                R.layout.semester_item,
+                testHolderView.class,
+                testQuery
+        ) {
+
+            @Override
+            protected void populateViewHolder(final testHolderView viewHolder, final EmploiModel model, int position) {
+
+                final String listPostKey = getRef(position).getKey();
+
+
+                dbRef.child("Emplois du temps").child(data).child(s).child(listPostKey).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        String s1 = String.valueOf(dataSnapshot.child("Name").getValue());
+                        /*String s2 = String.valueOf(dataSnapshot.child("s2").getValue());
+                        String s3 = String.valueOf(dataSnapshot.child("s3").getValue());
+                        String s4 = String.valueOf(dataSnapshot.child("s4").getValue());
+
+                         */
+
+
+                        viewHolder.title.setText(s1);
+
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+
+                viewHolder.layout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dbRef.child("Emplois du temps").child(data).child(s).child(listPostKey).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                pdf = String.valueOf(snapshot.child("PDF").getValue());
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+
+                        CharSequence options[] = new CharSequence[]{
+                                "Download",
+                                "View",
+                                "Cancel"
+                        };
+                        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                        builder.setTitle("Choose One");
+                        builder.setItems(options, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // we will be downloading the pdf
+                                if (which == 0) {
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(pdf));
+                                    startActivity(intent);
+                                }
+                                // We will view the pdf
+                                if (which == 1) {
+                                    Intent intent = new Intent(EmploiActivity.this, EmploiViewActivity.class);
+                                    intent.putExtra("url", pdf);
+                                    startActivity(intent);
+
+
+                                }
+                            }
+                        });
+                        builder.show();
+                    }
+                });
+
+
+
+            }
+        };
+        testRecycler.setAdapter(firebaseRecyclerAdapter);
+    }
+
+    public static class testHolderView extends RecyclerView.ViewHolder {
+
+        View view;
+        TextView title;
+        LinearLayout layout;
+
+        public testHolderView(View itemView) {
+            super(itemView);
+
+            view = itemView;
+
+            title = view.findViewById(R.id.emploiFile1);
+            layout = view.findViewById(R.id.linearLayoutFile1);
+
+
+        }
+    }
 
 
     private void emploi() {
@@ -75,30 +186,38 @@ public class EmploiActivity extends AppCompatActivity {
                 dbRef.child("Emplois du temps").child(data).child(listPostKey).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        String title = String.valueOf(dataSnapshot.getKey());
-                        String s1 = String.valueOf(dataSnapshot.child("s1").getValue());
-                        String s2 = String.valueOf(dataSnapshot.child("s2").getValue());
-                        String s3 = String.valueOf(dataSnapshot.child("s3").getValue());
-                        String s4 = String.valueOf(dataSnapshot.child("s4").getValue());
+                        String semester = String.valueOf(dataSnapshot.getKey());
+
+                        FirebaseDatabase.getInstance().getReference().child("Emplois du temps").child("filleSelect").addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                String s1 = String.valueOf(snapshot.getValue());
+                                if (s1.equals(listPostKey)){
+                                    viewHolder.layout.setBackgroundResource(R.drawable.bg_card_background);
+
+                                }else {
+                                    viewHolder.layout.setBackgroundResource(R.color.white);
+                                }
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
 
 
-                        viewHolder.title.setText(title);
+                        viewHolder.title.setText(semester);
 
-                        if (s1.equals("---")){
-                            viewHolder.buttonS1.setVisibility(View.GONE);
+
+                        if (check){
+                            check = false;
+                            test(listPostKey);
+                            FirebaseDatabase.getInstance().getReference().child("Emplois du temps").child("filleSelect").setValue(listPostKey);
                         }
 
-                        if (s2.equals("---")){
-                            viewHolder.buttonS2.setVisibility(View.GONE);
-                        }
 
-                        if (s3.equals("---")){
-                            viewHolder.buttonS3.setVisibility(View.GONE);
-                        }
-
-                        if (s4.equals("---")){
-                            viewHolder.buttonS4.setVisibility(View.GONE);
-                        }
 
 
                     }
@@ -112,193 +231,13 @@ public class EmploiActivity extends AppCompatActivity {
                 viewHolder.layout.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(EmploiActivity.this, " "+position, Toast.LENGTH_SHORT).show();
+
+                        FirebaseDatabase.getInstance().getReference().child("Emplois du temps").child("filleSelect").setValue(listPostKey);
+                        test(listPostKey);
                     }
                 });
 
-                viewHolder.buttonS1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
 
-
-                        dbRef.child("Emplois du temps").child(data).child(listPostKey).child("s1").addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                semester = String.valueOf(snapshot.getValue());
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-
-                        CharSequence options[] = new CharSequence[]{
-                                "Download",
-                                "View",
-                                "Cancel"
-                        };
-                        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                        builder.setTitle("Choose One");
-                        builder.setItems(options, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // we will be downloading the pdf
-                                if (which == 0) {
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(semester));
-                                    startActivity(intent);
-                                }
-                                // We will view the pdf
-                                if (which == 1) {
-                                    Intent intent = new Intent(EmploiActivity.this, EmploiViewActivity.class);
-                                    intent.putExtra("url", semester);
-                                    startActivity(intent);
-
-
-                                }
-                            }
-                        });
-                        builder.show();
-                    }
-                });
-
-                viewHolder.buttonS2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        dbRef.child("Emplois du temps").child(data).child(listPostKey).child("s2").addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                semester= String.valueOf(snapshot.getValue());
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-
-                        CharSequence options[] = new CharSequence[]{
-                                "Download",
-                                "View",
-                                "Cancel"
-                        };
-                        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                        builder.setTitle("Choose One");
-                        builder.setItems(options, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // we will be downloading the pdf
-                                if (which == 0) {
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(semester));
-                                    startActivity(intent);
-                                }
-                                // We will view the pdf
-                                if (which == 1) {
-                                    Intent intent = new Intent(EmploiActivity.this, EmploiViewActivity.class);
-                                    intent.putExtra("url", semester);
-                                    startActivity(intent);
-
-
-                                }
-                            }
-                        });
-                        builder.show();
-                    }
-                });
-
-                viewHolder.buttonS3.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        dbRef.child("Emplois du temps").child(data).child(listPostKey).child("s3").addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                semester = String.valueOf(snapshot.getValue());
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-
-                        CharSequence options[] = new CharSequence[]{
-                                "Download",
-                                "View",
-                                "Cancel"
-                        };
-                        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                        builder.setTitle("Choose One");
-                        builder.setItems(options, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // we will be downloading the pdf
-                                if (which == 0) {
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(semester));
-                                    startActivity(intent);
-                                }
-                                // We will view the pdf
-                                if (which == 1) {
-                                    Intent intent = new Intent(EmploiActivity.this, EmploiViewActivity.class);
-                                    intent.putExtra("url", semester);
-                                    startActivity(intent);
-
-
-                                }
-                            }
-                        });
-                        builder.show();
-                    }
-                });
-
-                viewHolder.buttonS4.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        dbRef.child("Emplois du temps").child(data).child(listPostKey).child("s4").addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                semester= String.valueOf(snapshot.getValue());
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-
-                        CharSequence options[] = new CharSequence[]{
-                                "Download",
-                                "View",
-                                "Cancel"
-                        };
-                        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                        builder.setTitle("Choose One");
-                        builder.setItems(options, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                // we will be downloading the pdf
-                                if (which == 0) {
-                                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(semester));
-                                    startActivity(intent);
-                                }
-                                // We will view the pdf
-                                if (which == 1) {
-                                    Intent intent = new Intent(EmploiActivity.this, EmploiViewActivity.class);
-                                    intent.putExtra("url", semester);
-                                    startActivity(intent);
-
-
-                                }
-                            }
-                        });
-                        builder.show();
-                    }
-                });
 
 
 
@@ -308,12 +247,12 @@ public class EmploiActivity extends AppCompatActivity {
         fileRecycler.setAdapter(firebaseRecyclerAdapterMessages);
     }
 
+
     public static class emploiHolderView extends RecyclerView.ViewHolder {
 
         View view;
         TextView title;
         LinearLayout layout;
-        Button buttonS1, buttonS2,buttonS3,buttonS4;
 
         public emploiHolderView(View itemView) {
             super(itemView);
@@ -323,10 +262,7 @@ public class EmploiActivity extends AppCompatActivity {
             title = view.findViewById(R.id.emploiFile);
             layout = view.findViewById(R.id.linearLayoutFile);
 
-            buttonS1 = view.findViewById(R.id.button1);
-            buttonS2 = view.findViewById(R.id.button2);
-            buttonS3 = view.findViewById(R.id.button3);
-            buttonS4 = view.findViewById(R.id.button4);
+
 
         }
     }
@@ -334,10 +270,17 @@ public class EmploiActivity extends AppCompatActivity {
 
     private void widget() {
 
+        testRecycler = findViewById(R.id.test1Recycler);
+        testRecycler.setHasFixedSize(true);
+        mLayoutManagersTest = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        testRecycler.setLayoutManager(mLayoutManagersTest);
+
         fileRecycler = findViewById(R.id.fileRecycler);
         fileRecycler.setHasFixedSize(true);
-        mLayoutManagersEmploi = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        mLayoutManagersEmploi = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         fileRecycler.setLayoutManager(mLayoutManagersEmploi);
+
+
 
     }
 }

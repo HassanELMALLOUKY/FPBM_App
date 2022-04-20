@@ -59,7 +59,6 @@ public class ScolariteFragment extends Fragment {
         firebaseAuth = FirebaseAuth.getInstance();
         currentUser = firebaseAuth.getCurrentUser().getUid();
 
-        Toast.makeText(getContext(), currentUser, Toast.LENGTH_SHORT).show();
 
         widget();
 

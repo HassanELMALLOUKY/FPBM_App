@@ -13,7 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -77,7 +76,6 @@ public class NotesFragment extends Fragment {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         String note1 = String.valueOf(dataSnapshot.child("Model1").child("note").getValue());
-                        Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT).show();
                         String name1 = String.valueOf(dataSnapshot.child("Model1").child("name").getValue());
 
                         String note2 = String.valueOf(dataSnapshot.child("Model2").child("note").getValue());

@@ -79,7 +79,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.181"
-                    app:srcCompat="@drawable/profile" />
+                    app:srcCompat="@drawable/user" />
 
                 <TextView
                     android:id="@+id/textView15"
@@ -106,7 +106,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView15">
 
                     <TextView
-                        android:id="@+id/button5"
+                        android:id="@+id/fullname"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="10dp"
@@ -123,7 +123,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/button4"
+                        android:id="@+id/cne"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="10dp"
@@ -141,7 +141,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/button3"
+                        android:id="@+id/birthday"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="10dp"
@@ -158,7 +158,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/button2"
+                        android:id="@+id/filiere"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="10dp"
@@ -191,18 +191,6 @@
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="67dp"
-                    android:layout_height="46dp"
-                    android:layout_marginStart="124dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="220dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/profile2" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

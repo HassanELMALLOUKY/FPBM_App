@@ -34,7 +34,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="  Scolarité"
+            app:title="          Scolarité"
             app:titleTextColor="#ffff" />
 
         <TextView
@@ -53,13 +53,14 @@
         <!-- Right most ImageView -->
 
         <ImageView
-            android:id="@+id/imageView2"
             android:layout_width="67dp"
             android:layout_height="46dp"
+            android:id="@+id/imageView2"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="208dp"
+            android:layout_marginEnd="324dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/graduation" />

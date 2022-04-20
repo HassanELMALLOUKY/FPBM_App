@@ -6,6 +6,55 @@
     android:layout_height="match_parent"
     android:background="#ECECEC">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ToolBar widget -->
+
+        <!-- Right most TextView -->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#15A9E4"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="  My Profile"
+            app:titleTextColor="#ffff" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="0"
+            android:textColor="#ffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Right most ImageView -->
+        <!-- ImageView beside title of ToolBar -->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,51 +62,42 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitXY"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/top_background" />
 
                 <ImageView
                     android:id="@+id/imageView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/imageView9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.181"
                     app:srcCompat="@drawable/profile" />
-
 
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="lionfischer@gmail.com"
-                    android:visibility="gone"
-
                     android:textSize="20dp"
+
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <LinearLayout
+                    android:id="@+id/linearLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="200dp"
                     android:layout_marginStart="24dp"
+                    android:layout_marginTop="270dp"
                     android:layout_marginEnd="24dp"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -91,9 +131,9 @@
                         android:background="@drawable/background_btn"
                         android:drawableStart="@drawable/ane"
                         android:drawablePadding="20dp"
-                        android:gravity="center_vertical"
-
                         android:elevation="3dp"
+
+                        android:gravity="center_vertical"
                         android:paddingStart="20dp"
                         android:text="CNE"
                         android:textAlignment="viewStart"
@@ -125,26 +165,25 @@
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/background_btn"
                         android:drawableStart="@drawable/speciality"
-                        android:paddingEnd="20dp"
-                        android:gravity="center_vertical"
                         android:drawablePadding="20dp"
                         android:elevation="3dp"
+                        android:gravity="center_vertical"
                         android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
                         android:text="Speciality"
                         android:textAlignment="viewStart"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
 
-
                     <Button
                         android:id="@+id/logout"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginBottom="10dp"
                         android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"
                         android:background="@drawable/background_blue"
                         android:elevation="3dp"
                         android:text="Log Out"
@@ -152,6 +191,20 @@
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="67dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="124dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="220dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/profile2" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

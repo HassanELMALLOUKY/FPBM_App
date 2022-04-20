@@ -15,11 +15,24 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class SupportFragment extends Fragment {
-
-
+    View view;
+    Button button;
+    FirebaseAuth mFirebaseAuth;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_support, container, false);
+
+        view=inflater.inflate(R.layout.fragment_support, container, false);
+        button=view.findViewById(R.id.logout);
+        mFirebaseAuth=FirebaseAuth.getInstance();
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mFirebaseAuth.signOut();
+                startActivity(new Intent(getContext(),SingInActivity.class));
+                getActivity().finish();
+            }
+        });
+        return view;
     }
 }

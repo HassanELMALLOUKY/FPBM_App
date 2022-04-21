@@ -6,9 +6,9 @@ Note : In our project there is two side, first one is the Android application mo
 To setup the app you can follow those easy steps :
 
 *if you want to use the app as student just install the apk file in your Android device and you can use this account to test if it's work or not : 
-apk path in project: app/release/fpbmApp.apk
 CNE: D12345678 
 BirthDay: 12345678
+APK path in project: app/release/fpbmApp.apk
 
 *if you want to manage the app for free it's also available: download this laravel project that let you do this: --------
 At The End if you like our simple work please press start to encourage us to give more.
